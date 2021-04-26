@@ -1,6 +1,6 @@
 # Header
 ```
-YOU NEED TO SET ON YOUR <Stack.Navigator /> THE PROP headerMode TO "float" or "screen"
+YOU NEED TO SET ON YOUR <Stack.Navigator /> THE PROP headerMode TO "screen"
 ```
 ## Dependencies
 ```bash
