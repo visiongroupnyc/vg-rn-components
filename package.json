@@ -1,5 +1,5 @@
 {
-  "main": "index.js",
+  "main": "index",
   "dependencies": {
     "@react-navigation/core": "^5.15.3",
     "@react-navigation/native": "^5.9.3",
