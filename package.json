@@ -2,11 +2,5 @@
   "author": {
     "url": "https://mauroluna.dev/",
     "name": "mauro luna"
-  },
-  "dependencies": {
-    "@react-navigation/core": "^5.15.3",
-    "expo-constants": "^9.3.5",
-    "react": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz"
   }
 }
