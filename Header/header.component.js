@@ -71,7 +71,7 @@ export default function Header(props) {
     else if (!left && back && navigation.canGoBack()) LeftComponent = BackButton;
 
     return (
-      <View style={header_styles.header_container}>
+      <View style={[header_styles.header_container, style]}>
         <View style={header_styles.header_left}>
           {LeftComponent && <LeftComponent />}
         </View>
@@ -94,10 +94,6 @@ export default function Header(props) {
     navigation.setOptions({
       header: () => handleControlls(),
       headerShow: Boolean(Object.keys(props).length),
-      headerStyle: {
-        elevation: 0,
-        ...style,
-      },
     });
   });
 

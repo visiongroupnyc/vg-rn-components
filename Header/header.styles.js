@@ -1,15 +1,17 @@
 import Constants from 'expo-constants';
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   header_container: {
     width: '100%',
     height: 48,
-    marginTop: Platform.OS === 'ios' ? Constants.statusBarHeight : 0,
+    marginTop: Constants.statusBarHeight,
     justifyContent: 'space-between',
     alignItems: 'flex-start',
     flexDirection: 'row',
     paddingHorizontal: 8,
+    borderBottomColor: '#00000020',
+    borderBottomWidth: 1,
   },
   header_left: {
     flex: 1,
