@@ -4,7 +4,7 @@ YOU NEED TO SET ON YOUR <Stack.Navigator /> THE PROP headerMode TO "screen"
 ```
 ## Dependencies
 ```bash
-  $ npm i -S @react-navigation/core expo-constants
+  npm i -S @react-navigation/core expo-constants
 ```
 
 ## Properties & values
@@ -17,13 +17,13 @@ back         | boolean              | true
 menu         | boolean, object      | false     
 style        | object               | object    
 
-## Use example: left, center & right props.
+## Use example: `left`, `center` & `right` props.
 ```javascript
   import React from 'react';
 
   import SomeLeftComponent from '...';
   import SomeRightComponent from '...';
-  import Header from '...';
+  import Header from 'vision-group-components';
 
   export function App() {
     return (
@@ -56,7 +56,7 @@ labelStyle   | object               | undefined | none   |
 
   import MyAwesomeLelfComponent from '...';
   import SearchComponent from '...';
-  import Header from '...';
+  import Header from 'vision-group-components';
 
   const my_controllers = [
     {
@@ -84,7 +84,7 @@ labelStyle   | object               | undefined | none   |
   }
 ```
 
-## Menu
+### `menu`
 The `menu` property draw an hamburger icon that can handle the `toggleDrawer()` function of `react-navigation`, this property override any function given on `left`, which means that any `function` that has been passed throught `left` property will be ignored if `menu` prop is present.
 
 `menu` property accepts an object in order to customize `onPress` action, `icon` and icon styles.
@@ -95,11 +95,11 @@ icon         | asset, uri           | undefined                   |
 onPress      | function             | `navigation.toggleDrawer()` |
 iconStyle    | object               | undefined                   |
 
-## Use example: menu
+## Use example: `menu`
 ```javascript
   import React from 'react';
 
-  import Header from '...';
+  import Header from 'vision-group-components';
 
   import drawer_icon from '...';
 
