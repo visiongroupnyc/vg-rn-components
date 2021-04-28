@@ -20,6 +20,13 @@ function Text(props) {
       }
       return property;
     });
+    if (style.length) {
+      const finalStyleObject = {};
+      style.forEach((object) => {
+        Object.assign(finalStyleObject, object);
+      });
+      return Object.assign(styles, finalStyleObject);
+    }
     return Object.assign(styles, style);
   }
 
