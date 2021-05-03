@@ -42,19 +42,28 @@ export default function ControlSystem(props) {
     return (<ControlContainer />);
   }
 
-  if (controllers.length) {
-    return (
-      <ControlContainer>
-        {map_controllers(controllers)}
-      </ControlContainer>
-    );
-  }
-
   if (typeof controllers === 'function') {
+    const Control = controllers;
     return (
       <ControlContainer>
         <Touchable>
-          {controllers()}
+          <Control />
+        </Touchable>
+      </ControlContainer>
+    );
+  }
+  if (typeof controllers === 'object') {
+    if (controllers.length) {
+      return (
+        <ControlContainer>
+          {map_controllers(controllers)}
+        </ControlContainer>
+      );
+    }
+    return (
+      <ControlContainer>
+        <Touchable>
+          {controllers}
         </Touchable>
       </ControlContainer>
     );

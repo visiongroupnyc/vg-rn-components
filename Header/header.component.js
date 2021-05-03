@@ -65,7 +65,7 @@ export default function Header(props) {
   }
 
   function handleControlls() {
-    if (!left && !center && !right) return;
+    if (!left && !center && !right && !menu) return;
     let LeftComponent = left;
     if (menu) LeftComponent = MenuButton;
     else if (!left && back && navigation.canGoBack()) LeftComponent = BackButton;

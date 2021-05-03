@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import touchable_styles from './touchable.styles';
 
@@ -10,6 +10,14 @@ export default function Touchable(props) {
     onPress,
     style = {},
   } = props;
+
+  if (!onPress) {
+    return (
+      <View style={[touchable_styles.touchable, style]}>
+        {children}
+      </View>
+    );
+  }
 
   return (
     <TouchableOpacity
