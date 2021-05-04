@@ -8,21 +8,11 @@ import {
   Keyboard,
 } from 'react-native';
 
-const StatusAndSafeAreaStyles = {
-  backgroundColor: '#FFF',
-};
-
-const ScreenStyles = {
-  backgroundColor: '#FFF',
-  position: 'relative',
-  flex: 1,
-};
-
 export default function Screen(props) {
   const {
     list,
     children,
-    contentContainerStyle = {},
+    safeAreaStyle = {},
     footer = {},
   } = props;
 
@@ -42,7 +32,7 @@ export default function Screen(props) {
 
   if (list) {
     return (
-      <SafeAreaView style={{ flex: 1, ...StatusAndSafeAreaStyles }}>
+      <SafeAreaView style={[{ flex: 1 }, safeAreaStyle]}>
         <KeyboardAvoidingView
           style={{ flex: 1 }}
           behavior={Platform.OS === 'ios' ? 'padding' : null}
@@ -56,7 +46,7 @@ export default function Screen(props) {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={[{ flex: 1 }, safeAreaStyle]}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : null}
