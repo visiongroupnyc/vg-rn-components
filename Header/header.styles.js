@@ -35,8 +35,8 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   header__menu_button__icon: {
-    width: 32,
-    height: 32,
+    width: 24,
+    height: 24,
   },
 
   header__back_button: {
@@ -44,8 +44,8 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   header__back_button__icon: {
-    width: 32,
-    height: 32,
+    width: 24,
+    height: 24,
   },
   header__back_button__text: {
     color: '#0070F3',
