@@ -42,11 +42,10 @@ export default StyleSheet.create({
   header__back_button: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-start',
   },
   header__back_button__icon: {
-    width: 16,
-    height: 22,
+    width: 32,
+    height: 32,
   },
   header__back_button__text: {
     color: '#0070F3',

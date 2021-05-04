@@ -48,16 +48,18 @@ export default function Header(props) {
   }
 
   function BackButton() {
+    const icon = back.icon || back_icon;
+
     return (
       <Touchable
         style={header_styles.header__back_button}
         onPress={() => navigation.goBack()}
       >
         <Image
-          source={back.icon || back_icon}
+          source={icon}
           style={header_styles.header__back_button__icon}
         />
-        {!back.icon && (
+        {!icon && (
           <Text style={header_styles.header__back_button__text}>
             Back
           </Text>
