@@ -54,12 +54,14 @@ export default function Header(props) {
         onPress={() => navigation.goBack()}
       >
         <Image
-          source={menu.icon || back_icon}
+          source={back.icon || back_icon}
           style={header_styles.header__back_button__icon}
         />
-        <Text style={header_styles.header__back_button__text}>
-          Back
-        </Text>
+        {!back.icon && (
+          <Text style={header_styles.header__back_button__text}>
+            Back
+          </Text>
+        )}
       </Touchable>
     );
   }

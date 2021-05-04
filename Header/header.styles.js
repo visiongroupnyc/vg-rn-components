@@ -42,6 +42,7 @@ export default StyleSheet.create({
   header__back_button: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'flex-start',
   },
   header__back_button__icon: {
     width: 16,
