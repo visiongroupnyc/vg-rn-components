@@ -6,13 +6,16 @@ import {
   SafeAreaView,
   ScrollView,
   Keyboard,
+  View,
 } from 'react-native';
 
 export default function Screen(props) {
   const {
     list,
     children,
-    safeAreaStyle = {},
+    safearea = {},
+    keyboardavoidingview = {},
+    scrollview = {},
     footer = {},
   } = props;
 
@@ -32,13 +35,21 @@ export default function Screen(props) {
 
   if (list) {
     return (
-      <SafeAreaView style={[{ flex: 1 }, safeAreaStyle]}>
+      <SafeAreaView {...safearea} style={[{ flex: 1 }, safearea.style]}>
         <KeyboardAvoidingView
-          style={{ flex: 1 }}
+          {...keyboardavoidingview}
+          style={[{ flex: 1 }, keyboardavoidingview.style]}
           behavior={Platform.OS === 'ios' ? 'padding' : null}
-          keyboardVerticalOffset={100}
         >
-          {children}
+          <View
+            style={[
+              { flex: 1 },
+              scrollview.style,
+              scrollview.contentContainerStyle,
+            ]}
+          >
+            {children}
+          </View>
         </KeyboardAvoidingView>
         {FooterComponent && !isKeyboardUp && (<FooterComponent />)}
       </SafeAreaView>
@@ -46,13 +57,19 @@ export default function Screen(props) {
   }
 
   return (
-    <SafeAreaView style={[{ flex: 1 }, safeAreaStyle]}>
+    <SafeAreaView {...safearea} style={[{ flex: 1 }, safearea.style]}>
       <KeyboardAvoidingView
-        style={{ flex: 1 }}
+        {...keyboardavoidingview}
+        style={[{ flex: 1 }, keyboardavoidingview.style]}
         behavior={Platform.OS === 'ios' ? 'padding' : null}
-        keyboardVerticalOffset={100}
       >
-        <ScrollView>
+        <ScrollView
+          style={scrollview.style}
+          contentContainerStyle={[
+            scrollview.contentContainerStyle,
+            { flex: 1 },
+          ]}
+        >
           {children}
         </ScrollView>
       </KeyboardAvoidingView>
