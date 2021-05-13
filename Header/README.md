@@ -4,7 +4,7 @@ YOU NEED TO SET ON YOUR <Stack.Navigator /> THE PROP headerMode TO "screen"
 ```
 ## Dependencies
 ```bash
-  npm i -S @react-navigation/core expo-constants
+  npm i -S @react-navigation/native expo-constants
 ```
 
 ## Properties & values

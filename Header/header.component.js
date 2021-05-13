@@ -1,6 +1,6 @@
 import React, { useLayoutEffect } from 'react';
 
-import { useNavigation } from '@react-navigation/core';
+import { useNavigation } from '@react-navigation/native';
 
 import { View, Image, Text } from 'react-native';
 import ControlSystem from './components/control-system';
