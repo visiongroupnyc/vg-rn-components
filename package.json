@@ -1,9 +1,13 @@
 {
-  "name": "vision-group-components",
+  "name": "hig-react-native-components",
   "author": {
     "url": "https://mauroluna.dev/",
     "name": "mauro luna"
   },
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@react-navigation/native": "^5.9.3",
+    "expo-constants": "^9.3.5"
+  }
 }
