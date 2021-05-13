@@ -5,5 +5,8 @@
     "name": "mauro luna"
   },
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@react-navigation/native": "^5.9.3"
+  }
 }
