@@ -28,7 +28,7 @@ function SlideUp(props) {
   const slideup = () => {
     Animated.timing(slide, {
       toValue: 0,
-      duration: 350,
+      duration: 300,
       useNativeDriver: false,
     }).start();
   };
@@ -36,7 +36,7 @@ function SlideUp(props) {
   const slidedown = () => {
     Animated.timing(slide, {
       toValue: -1900,
-      duration: 300,
+      duration: 250,
       useNativeDriver: false,
     }).start(() => {
       if (onCancel) onCancel();
@@ -69,15 +69,10 @@ function SlideUp(props) {
             style={[styles.slide_up__animated, { bottom: slide }]}
           >
             {action && (
-              <TouchableOpacity
-                style={[styles.slide_up__action, { right: 6 }]}
-                onPress={() => action.onPress()}
-              >
-                <Image
-                  source={action.icon}
-                  style={styles.slide_up__close_icon}
-                />
-              </TouchableOpacity>
+              <View style={[styles.slide_up__action, { right: 6 }]}>
+                {action && typeof action === 'function' && action()}
+                {action && typeof action === 'object' && action}
+              </View>
             )}
             <TouchableOpacity
               style={[styles.slide_up__action, action ? { left: 6 } : { right: 6 }]}
